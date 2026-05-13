@@ -1,26 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Weather App</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Weather App</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="weather-container">
-    <h1 style="color: brown;">Weather App</h1>
-    <input type="text" id="location-input" placeholder="Enter location">
-    <button id="city-button" onclick="getWeather()">Get Weather</button>
-    <div id="weather-info">
-        <h2 id="location"></h2>
-        <p id="temperature"></p>
-        <p id="weather"></p>
-        <p id="humidity"></p>
-        <p id="wind"></p>
-    </div>
-    <p id="error-message" class="error-message"></p>
-</div>
 
-<script src="script.js"></script>
+  <div class="background-overlay"></div>
+
+  <main class="container">
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>🌤 Weather Forecast</h1>
+      <p>Get real-time weather updates for any city in the world.</p>
+    </section>
+
+    <!-- Weather Card -->
+    <section class="weather-card">
+
+      <div class="search-box">
+        <input
+          type="text"
+          id="location-input"
+          placeholder="Enter city name..."
+        />
+
+        <button id="city-button" onclick="getWeather()">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+
+      <div id="weather-info">
+
+        <div class="weather-details">
+          <h2 id="location">Search a city</h2>
+
+          <div class="temp-box">
+            <h1 id="temperature">--°C</h1>
+          </div>
+
+          <p id="weather">Weather condition</p>
+
+          <div class="extra-info">
+
+            <div class="info-card">
+              <i class="fas fa-droplet"></i>
+              <span id="humidity">--%</span>
+            </div>
+
+            <div class="info-card">
+              <i class="fas fa-wind"></i>
+              <span id="wind">-- m/s</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <p id="error-message" class="error-message"></p>
+
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+
+      <div class="feature-card">
+        <i class="fas fa-cloud-sun"></i>
+        <h3>Live Weather</h3>
+        <p>Real-time weather updates from trusted APIs.</p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fas fa-location-dot"></i>
+        <h3>Global Coverage</h3>
+        <p>Search weather conditions from anywhere worldwide.</p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fas fa-mobile-screen"></i>
+        <h3>Responsive Design</h3>
+        <p>Optimized beautifully for desktop and mobile devices.</p>
+      </div>
+
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <h2>What Users Say</h2>
+
+      <div class="testimonial-container">
+
+        <div class="testimonial">
+          <p>"A clean and beautiful weather app. Very easy to use!"</p>
+          <h4>- Sarah</h4>
+        </div>
+
+        <div class="testimonial">
+          <p>"Fast, responsive, and visually impressive."</p>
+          <h4>- David</h4>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Weather App | Designed with ❤️</p>
+
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
